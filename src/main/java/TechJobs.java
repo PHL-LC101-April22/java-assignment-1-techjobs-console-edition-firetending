@@ -121,13 +121,12 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         String[] outputFields = {"position type", "name", "employer", "location", "core competency"};
         String newLine = System.lineSeparator();
-        for (HashMap job : someJobs) {
-            System.out.println(newLine+"*****");
-            for (int i = 0; i < outputFields.length; i++) {
-                System.out.printf(outputFields[i] + ": " + job.get(outputFields[i])+newLine);
+        for (HashMap<String, String> job : someJobs) {
+            System.out.print(newLine+"*****"+newLine);
+            for (String outputField : outputFields) {
+                System.out.printf(outputField + ": " + job.get(outputField) + newLine);
             }
-//            for ()
-            System.out.println("*****");
+            System.out.print("*****"+newLine);
         }
 
 //        System.out.println("printJobs is not implemented yet");
