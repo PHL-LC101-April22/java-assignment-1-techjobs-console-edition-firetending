@@ -101,7 +101,6 @@ public class JobData {
         for (HashMap<String, String> row : allJobs) {
             for (Map.Entry<String, String> column : row.entrySet()) {
                 if (column.getValue().toLowerCase().contains(searchValue)) {
-                    System.out.println("found");
                     jobs.add(row);
                     break;
                 }
